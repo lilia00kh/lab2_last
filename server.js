@@ -16,16 +16,20 @@ app.get('/', function (request, response) {
   response.render('pages/index', { title: 'Home' })
 })
 
+app.get('/cargo', function (request, response) {
+  response.render('pages/cargo', { title: 'Вантаж' })
+})
+
+app.get('/stationsOnOrbits', function (request, response) {
+  response.render('pages/stationsOnOrbits', { title: 'Станції на орбітах' })
+})
+
 app.get('/planets', function (request, response) {
   response.render('pages/planets', { title: 'Планети' })
 })
 
 app.get('/spaceStations', function (request, response) {
   response.render('pages/spaceStations', { title: 'Космічні станції' })
-})
-
-app.get('/cargo', function (request, response) {
-  response.render('pages/cargo', { title: 'Вантаж' })
 })
 
 // запускаємо аплікацію
