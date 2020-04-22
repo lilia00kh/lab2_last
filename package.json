@@ -17,8 +17,17 @@
     "nodemon": "^1.18.10"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "vtx",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lilia00kh/lab2_last.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lilia00kh/lab2_last/issues"
+  },
+  "homepage": "https://github.com/lilia00kh/lab2_last#readme"
 }

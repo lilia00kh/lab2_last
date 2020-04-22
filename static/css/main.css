@@ -6,3 +6,10 @@
   display: inline-block;
   margin-right: 5px;
 }
+
+.hidden {
+  display: none;
+}
+.selected {
+  background-color: #70FFA0;
+}
