@@ -1,38 +1,39 @@
 'use strict'
 
-const shopModel = new Shop() // eslint-disable-line no-undef
+const cargoModel = new Cargo() // eslint-disable-line no-undef
 
 function initAddForm () {
-  const form = window.document.querySelector('#shop-add-form')
+  const form = window.document.querySelector('#cargo-add-form')
   form.addEventListener('submit', function (e) {
     e.preventDefault()
 
     const formData = new FormData(e.target)
-    const shopData = {}
+    const cargoData = {}
     formData.forEach((value, key) => {
-      shopData[key] = value
+      cargoData[key] = value
     })
 
-    shopModel.Create(shopData)
+    cargoModel.Create(cargoData)
 
     e.target.reset()
   })
 }
 
 function initList () {
-  window.jQuery('#shop-list').DataTable({
-    data: shopModel.Select(),
+  window.jQuery('#cargo-list').DataTable({
+    data: cargoModel.Select(),
     columns: [
       { title: 'ID', data: 'id' },
+      { title: 'Code', data: 'code' },
       { title: 'Name', data: 'name' },
-      { title: 'Address', data: 'address' }
+      { title: 'Mass', data: 'mass' }
     ]
   })
 }
 
 function initListEvents () {
-  document.addEventListener('shopsListDataChanged', function (e) {
-    const dataTable = window.jQuery('#shop-list').DataTable()
+  document.addEventListener('cargoListDataChanged', function (e) {
+    const dataTable = window.jQuery('#cargo-list').DataTable()
 
     dataTable.clear()
     dataTable.rows.add(e.detail)

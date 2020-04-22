@@ -9,15 +9,14 @@ html
   body
     block nav#navbar
       +nav('Lab2', 'main_menu')
-        +nav_item( '/' ) Home
-        +nav_item( '/shop' ) Shop
-        +nav_item( '/SpaceStation' ) Космічні станції
-          +nav_item( '/planets' ) Планети
-          +nav_item( '/Cargo' ) Вантаж
-          +nav_item( '/DeliveryToTheStation' ) Доставка вантажу на станцію
-          +nav_item( '/DeliveryToThePlanet' ) Доставка вантажу на планету
-          +nav_item( '/DeliveryFromStationToTheStation' ) Перевезення із станції на станцію
-          +nav_item( '/DeliveryFromStationToThePlanet' ) Перевезення з планети на станцію
+        +nav_item( '/' ) Домашня сторінка
+        +nav_item( '/spaceStations' ) Космічні станції
+        +nav_item( '/planets' ) Планети
+        +nav_item( '/cargo' ) Вантаж
+        +nav_item( '/DeliveryToTheStation' ) Доставка вантажу на станцію
+        +nav_item( '/DeliveryToThePlanet' ) Доставка вантажу на планету
+        +nav_item( '/DeliveryFromStationToTheStation' ) Перевезення із станції на станцію
+        +nav_item( '/DeliveryFromStationToThePlanet' ) Перевезення з планети на станцію
 
     div.main.container
         block content

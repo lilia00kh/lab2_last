@@ -1,0 +1,33 @@
+extends ../layout.pug
+
+block prepend styles
+    link(rel='stylesheet' href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css')
+
+block content
+    div(class='breadcrumb')
+        li= title
+    form(id='spaceStations-add-form' name='spaceStations-add-form' class='form-inline' action='')
+        div(class='form-group')
+            div(class='col-md-3')
+                label(for='number') Номер
+            div(class='col-md-9')
+                input(id='number' name='number' required='required' type='number' value='' class='form-control')
+        div(class='form-group')
+            div(class='col-md-3')
+                label(for='name') Назва
+            div(class='col-md-9')
+                input(id='name' name='name' value='' class='form-control')
+        div(class='form-group')
+            div(class='col-md-3')
+                label(for='capacity') Місткість
+            div(class='col-md-9')
+                input(id='capacity' type='number' name='capacity' value='' class='form-control')
+        div(class='form-group')
+            div(class='col-md-12')
+                button(type='submit' class='btn btn-primary') Створити
+        div.list-wrapper
+            table(id='spaceStations-list')
+block append scripts
+    script(src='/static/js/models/spaceStations.js')
+    script(src='//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js')
+    script(src='/static/js/views/spaceStations.js')

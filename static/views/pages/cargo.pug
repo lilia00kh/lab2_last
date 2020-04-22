@@ -6,28 +6,28 @@ block prepend styles
 block content
     div(class='breadcrumb')
         li= title
-    form(id='planets-add-form' name='planets-add-form' class='form-inline' action='')
+    form(id='cargo-add-form' name='cargo-add-form' class='form-inline' action='')
+        div(class='form-group')
+            div(class='col-md-3')
+                label(for='code') Код
+            div(class='col-md-9')
+                input(id='code' name='code' required='required' type='number' value='' class='form-control')
         div(class='form-group')
             div(class='col-md-3')
                 label(for='name') Назва
             div(class='col-md-9')
-                input(id='name' name='name' required='required' value='' class='form-control')
+                input(id='name' name='name' value='' class='form-control')
         div(class='form-group')
             div(class='col-md-3')
-                label(for='mass') Маса
+                label(for='mass') Вага
             div(class='col-md-9')
                 input(id='mass' type='number' name='mass' value='' class='form-control')
-        div(class='form-group')
-             div(class='col-md-3')
-                 label(for='capacity') Місткість
-             div(class='col-md-9')
-                  input(id='capacity' type='number' name='capacity' value='' class='form-control')
         div(class='form-group')
             div(class='col-md-12')
                 button(type='submit' class='btn btn-primary') Створити
         div.list-wrapper
-            table(id='planets-list')
+            table(id='cargo-list')
 block append scripts
-    script(src='/static/js/models/planets.js')
+    script(src='/static/js/models/cargo.js')
     script(src='//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js')
-    script(src='/static/js/views/planets.js')
+    script(src='/static/js/views/cargo.js')
