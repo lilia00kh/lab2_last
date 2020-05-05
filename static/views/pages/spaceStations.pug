@@ -14,25 +14,26 @@ block content
                 input(id='number' name='number' required='required' type='number' value='' class='form-control')
         div(class='form-group')
             div(class='col-md-3')
-                label(for='name') Назва
+                label(for='necessity') Необхідність
             div(class='col-md-9')
-                input(id='name' name='name' value='' class='form-control')
+                input(id='necessity' name='necessity' required='required' type='number' value='' class='form-control')
         div(class='form-group')
             div(class='col-md-3')
                 label(for='capacity') Місткість
             div(class='col-md-9')
                 input(id='capacity' name='capacity' required='required' type='number' value='' class='form-control')
         div(class='form-group')
-            div(class='col-md-12')
+            div(class='col')
                 button(id='submit' type='submit' class='btn btn-primary') Створити
         div(class='form-group')
-            div(class='col-md-12')
-                button(id='update' type='submit' class='btn btn-primary hidden') Оновити
+            div(class='col')
+                button(id='update' type='submit' class='btn btn-primary hidden' style={margin: '10px'}) Оновити
         div(class='form-group')
-            div(class='col-md-12')
+            div(class='col')
                 button(id='delete' class='btn btn-primary hidden') Видалити
         div.list-wrapper
             table(id='spaceStations-list')
+
 block append scripts
     script(src='/static/js/models/spaceStations.js')
     script(src='//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js')

@@ -18,8 +18,14 @@ block content
             div(class='col-md-9')
                 input(id='planet' name='planet' value='' class='form-control')
         div(class='form-group')
-            div(class='col-md-12')
-                button(type='submit' class='btn btn-primary') Створити
+            div(class='col')
+                button(id='submit' type='submit' class='btn btn-primary') Створити
+        div(class='form-group')
+            div(class='col')
+                button(id='update' type='submit' class='btn btn-primary hidden') Оновити
+        div(class='form-group')
+            div(class='col')
+                button(id='delete' class='btn btn-primary hidden') Видалити
         div.list-wrapper
             table(id='stationsOnOrbits-list')
 block append scripts

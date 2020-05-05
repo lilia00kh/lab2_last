@@ -23,10 +23,20 @@ block content
              div(class='col-md-9')
                   input(id='capacity' type='number' name='capacity' value='' class='form-control')
         div(class='form-group')
-            div(class='col-md-12')
-                button(type='submit' class='btn btn-primary') Створити
+            div(class='col')
+                button(id='submit' type='submit' class='btn btn-primary') Створити
+        div(class='form-group')
+            div(class='col')
+                button(id='update' type='submit' class='btn btn-primary hidden' style={margin: '10px'}) Оновити
+        div(class='form-group')
+            div(class='col')
+                button(id='delete' class='btn btn-primary hidden') Видалити
         div.list-wrapper
             table(id='planets-list')
+    div(class='breadcrumb')
+        li= title2
+    div.list-wrapper
+        table(id='planets2-list')
 block append scripts
     script(src='/static/js/models/planets.js')
     script(src='//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js')

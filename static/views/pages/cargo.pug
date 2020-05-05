@@ -23,8 +23,14 @@ block content
             div(class='col-md-9')
                 input(id='mass' type='number' name='mass' value='' class='form-control')
         div(class='form-group')
-            div(class='col-md-12')
-                button(type='submit' class='btn btn-primary') Створити
+            div(class='col')
+                button(id='submit' type='submit' class='btn btn-primary') Створити
+        div(class='form-group')
+            div(class='col')
+                button(id='update' type='submit' class='btn btn-primary hidden' style={margin: '10px'}) Оновити
+        div(class='form-group')
+            div(class='col')
+                button(id='delete' class='btn btn-primary hidden') Видалити
         div.list-wrapper
             table(id='cargo-list')
 block append scripts

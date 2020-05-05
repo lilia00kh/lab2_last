@@ -3,7 +3,19 @@ extends ../layout.pug
 block content
   div(class='breadcrumb')
     div= title
+    block styles
+      link(rel='stylesheet' href='/static/css/main.css')
+      link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous")
+
   div.list-group
     div.list-group-item
       span(class='list-icon glyphicon glyphicon-briefcase')
-      a(href='/planets') Планети
+      a(href='/spaceStations' style={padding: '10px'} ) Космічні станції
+      span(class='list-icon glyphicon glyphicon-briefcase')
+      a(href='/planets' style={padding: '10px'}) Планети
+      span(class='list-icon glyphicon glyphicon-briefcase')
+      a(href='/cargo' style={padding: '10px'} ) Вантаж
+      span(class='list-icon glyphicon glyphicon-briefcase')
+      a(href='/cargo_on_planet' style={padding: '10px'} ) Доставка вантажу на планету
+      span(class='list-icon glyphicon glyphicon-briefcase')
+      a(href='/cargo_on_station' style={padding: '10px'}) Доставка вантажу на станцію
